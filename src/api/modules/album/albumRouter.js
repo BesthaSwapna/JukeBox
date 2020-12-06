@@ -9,7 +9,6 @@ const router = Router();
 router.post('/', Validation.create, controller.create);
 router.get('/', controller.lowePriceAlbums);
 router.get('/all_albums', controller.allAlbums);
-router.get('/musician', controller.musiciansList);
 router.get('/musicians_list/:album_id', controller.musiciansListForAlbum)
 
 

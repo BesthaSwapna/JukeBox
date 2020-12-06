@@ -53,7 +53,7 @@ class AlbumService {
   // list of musicians for a music album sorted by musician's Name
   static async musiciansListForAlbum(req) {
     try {
-      const AlbumRecords = await models.albums.findOne({
+      const albumRecord = await models.albums.findOne({
         where: { album_id: req.params.album_id },
         include: models.musicians,
         // Add order conditions here....
@@ -62,7 +62,7 @@ class AlbumService {
         ],
         attributes: ['name', 'release_date', 'genre', 'price', 'album_id']
       });
-      return AlbumRecords
+      return albumRecord
 
     } catch (error) {
       Logger.log('error', 'error in get musiciansListForAlbum', error);
@@ -76,7 +76,7 @@ class AlbumService {
 
   static async lowePriceAlbums(req) {
     try {
-      const AlbumRecords = await models.albums.findAll({
+      const albumRecords = await models.albums.findAll({
         where: {},
         include: models.musicians,
         // Add order conditions here....
@@ -86,7 +86,7 @@ class AlbumService {
         ],
         attributes: ['name', 'release_date', 'genre', 'price', 'album_id', 'created_at']
       });
-      return AlbumRecords
+      return albumRecords
 
     } catch (error) {
       Logger.log('error', 'error in Get lowePriceAlbums', error);

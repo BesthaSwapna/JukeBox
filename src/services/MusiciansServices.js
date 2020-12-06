@@ -31,17 +31,6 @@ class Musicians {
     }
   }
 
-
-  static async musiciansList() {
-    try {
-      let consition = {
-
-      }
-
-    } catch (error) {
-
-    }
-  }
 }
 
 module.exports = Musicians
