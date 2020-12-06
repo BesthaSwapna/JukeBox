@@ -20,7 +20,7 @@ const config = {
     uname: 'root',
     pwd: '',
     host: 'localhost',
-    dbname: 'junkebox',
+    dbname: 'jukebox',
     dialect: 'mysql'
   },
 
